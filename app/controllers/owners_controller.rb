@@ -1,11 +1,11 @@
 class OwnersController < ApplicationController
   def index
-    @o = Owners.all.sort_by{|onr| onr.first_name }
+    @owner = Owner.all.sort_by{|owner| owner.first_name }
   end
 
   def show
-    @onr = nil
-    @onr = Owner.find(params[:id])
+    @owner = nil
+    @owner = Owner.find(params[:id])
     return @onr if @onr
   end
 
